@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('main.home') }}">Home</a></li>
+            <li><a href="{{ url_for('main.projects') }}">Projects</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>My Projects</h1>
+        <p>A showcase of my work and contributions</p>
+    </header>
+    <section>
+        <h2>Project 1</h2>
+        <p>Description of project 1. Includes key technologies used and outcomes.</p>
+        <a href="#">View Project</a>
+    </section>
+    <section>
+        <h2>Project 2</h2>
+        <p>Description of project 2. Highlights the impact and innovations.</p>
+        <a href="#">View Project</a>
+    </section>
+    <section>
+        <h2>Project 3</h2>
+        <p>Description of project 3. Showcases data analysis or visualization.</p>
+        <a href="#">View Project</a>
+    </section>
+</body>
+</html>

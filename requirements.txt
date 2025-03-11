@@ -1,2 +1,1 @@
 Flask
-# Adicione outras dependências aqui (ex: SQLAlchemy, requests, etc.)
