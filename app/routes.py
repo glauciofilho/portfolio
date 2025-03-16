@@ -15,4 +15,4 @@ def projects():
 def health_check():
     """Endpoint for health checks."""
 
-    return jsonify({"status": "ok"}), 200
+    return jsonify(status = "healthy"), 200
