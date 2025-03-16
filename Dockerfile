@@ -13,4 +13,6 @@ ENV FLASK_ENV=production
 
 EXPOSE 5000
 
+RUN apt-get update && apt-get install -y curl
+
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:application"]
