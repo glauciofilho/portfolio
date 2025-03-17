@@ -19,4 +19,4 @@ RUN apt-get update && apt-get install -y curl
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
 CMD curl -f http://localhost:8001/health || exit 1
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8001", "--workers", "3", "--threads", "2", "wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8001", "wsgi:app"]
