@@ -1,11 +1,11 @@
-FROM python:3.13
+FROM python:3.12
 RUN pip install --upgrade pip
 
 WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
@@ -19,4 +19,4 @@ RUN apt-get update && apt-get install -y curl
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
 CMD curl -f http://localhost:8001/health || exit 1
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8001", "wsgi:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8001", "wsgi:application"]
