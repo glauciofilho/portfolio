@@ -1,5 +1,4 @@
-from flask import Blueprint, render_template
-import jsonify
+from flask import Blueprint, render_template, jsonify
 
 main = Blueprint("main", __name__)
 
