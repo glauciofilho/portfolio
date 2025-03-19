@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, render_template
 
 main = Blueprint("main", __name__)
 
@@ -14,4 +14,4 @@ def projects():
 def health_check():
     """Endpoint for health checks."""
 
-    return jsonify(status = "healthy"), 200
+    return "healthy", 200
